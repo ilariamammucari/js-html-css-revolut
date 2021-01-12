@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.container {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.container ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  line-height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container ul li img{
+  width: 150px;
+  vertical-align: middle;
+}
+
+.container ul li i{
+  font-size: 15px;
+}
+
+.container ul li i.fa-chevron-up{
+  display: none;
+}
+
+.container ul li button {
+  font-size: 20px;
+  border: 1px solid fuchsia;
+  border-radius: 25px;
+  padding: 15px 25px;
+  color: white;
+  background-color: fuchsia;
+}
+
+/* caratteristiche dropdown */
+.drop-menu{
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+}
+.drop-menu .dropdown{
+  width: 200px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  display: none;
+  text-transform: none;
+  position: absolute;
+  top: 100px;
+  left: -50px;
+}
+
+/* classi per js */
+.dropdown.active{
+  display: block;
+}
+
+i.active {
+  display: inline-block;
+}
+
