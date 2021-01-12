@@ -1,3 +1,9 @@
+:root{
+  --coloreprincipale: white;
+  --fontprincipale: 'Roboto', sans-serif;
+  --colorehover: black;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -5,8 +11,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-
+  font-family: var(--fontprincipale);
 }
 
 .container {
@@ -36,6 +41,7 @@ body {
 
 .container ul li i{
   font-size: 15px;
+  transition: all 0.3s;
 }
 
 .container ul li button {
@@ -47,14 +53,22 @@ body {
   background-color: fuchsia;
 }
 
+.container ul li:hover{
+  color: var(--colorehover);
+}
+
+
+
 /* caratteristiche dropdown */
 .drop-menu{
   cursor: pointer;
   height: 100%;
   position: relative;
 }
+
 .drop-menu .dropdown{
   width: 200px;
+  background-color: var(--coloreprincipale);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
   color: gray;
   line-height: 4;
@@ -62,16 +76,14 @@ body {
   text-transform: none;
   position: absolute;
   top: 100px;
-  left: -65px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .drop-menu .dropdown > div:hover{
   text-decoration: underline;
 }
 
-.drop-menu:hover{
-  color: black;
-}
 .
 /* classi per js */
 .active{
@@ -79,5 +91,5 @@ body {
 }
 
 i.active{
-  display: none;
+  transform: rotate(180deg);
 }
